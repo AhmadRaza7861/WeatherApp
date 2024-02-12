@@ -12,7 +12,7 @@ class ForeCastTitleWidget extends StatelessWidget {
       color: Colors.blueGrey,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
       child: Padding(
-        padding: const EdgeInsets.all(20),
+        padding: const EdgeInsets.all(10),
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,

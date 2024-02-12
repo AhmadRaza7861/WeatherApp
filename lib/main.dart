@@ -11,7 +11,7 @@ import 'firebase/firebase_messaging_plugin.dart';
 Future<void> main() async{
   WidgetsFlutterBinding.ensureInitialized();
 
-  await Firebase.initializeApp();
+ await Firebase.initializeApp();
   FirebaseMessaging.onBackgroundMessage(firebaseMessagingBackgroundHandler);
   await initLocalNotification();
   runApp(const MyApp());

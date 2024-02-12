@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:fluttertoast/fluttertoast.dart';
+ import 'package:fluttertoast/fluttertoast.dart';
 import 'package:weather_app/common/color_constants.dart';
 void showToast({required String message,ToastGravity toastGravity=ToastGravity.CENTER}) {
   Fluttertoast.showToast(

@@ -95,7 +95,7 @@ class _WeatherScreenState extends State<WeatherScreen> {
                               controller:controller.screenshotController,
                               child: Column(
                                 children: [
-                                  SizedBox(height: MediaQuery.of(context).size.height/20,),
+                                  SizedBox(height: MediaQuery.of(context).size.height/55,),
                                   WeatherTileWidget(
                                       context:context,
                                       title:(data.name !=null && data.name!.isNotEmpty)?
@@ -143,7 +143,7 @@ class _WeatherScreenState extends State<WeatherScreen> {
                             ),
                             const SizedBox(height: 30,),
                             Padding(
-                              padding: const EdgeInsets.all(8.0),
+                              padding: const EdgeInsets.all(4.0),
                               child: ElevatedButton(onPressed: (){
                                 controller.CaptureScreenShoot(context);
                               }, child: Text("ScreenShot")),
@@ -206,7 +206,6 @@ class _WeatherScreenState extends State<WeatherScreen> {
         return;
       }
     }
-
     permissionStatus=await location.hasPermission();
     if(permissionStatus==PermissionStatus.denied)
     {
@@ -216,7 +215,6 @@ class _WeatherScreenState extends State<WeatherScreen> {
         return;
       }
     }
-
     controller.locationData.value=await location.getLocation();
     listener=location.onLocationChanged.listen((event) {
 

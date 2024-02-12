@@ -13,7 +13,7 @@ Future<void>requestNotificationPermissions()async{
   if(Platform.isAndroid)
     {
       final androidImplement=flutterLocalNotificationsPlugin.resolvePlatformSpecificImplementation<AndroidFlutterLocalNotificationsPlugin>();
-      await androidImplement?.requestPermission();
+      await androidImplement?.requestNotificationsPermission();
     }
 
 }
