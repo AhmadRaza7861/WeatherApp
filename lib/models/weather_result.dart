@@ -134,11 +134,11 @@ class Weather {
 
 class Main {
   String? temp;
-  double? feelsLike;
+  String? feelsLike;
   double? tempMin;
-  double? tempMax;
-  int? pressure;
-  int? humidity;
+  String? tempMax;
+  String? pressure;
+  String? humidity;
 
   Main(
       {this.temp,
@@ -150,11 +150,11 @@ class Main {
 
   Main.fromJson(Map<String, dynamic> json) {
     temp = json['temp'].toString();
-   // feelsLike = json['feels_like'];
+   feelsLike = json['feels_like'].toString();
     tempMin = double.parse(json['temp_min'].toString());
-    tempMax = json['temp_max'];
-    pressure = json['pressure'];
-    humidity = json['humidity'];
+    tempMax = json['temp_max'].toString();
+    pressure = json['pressure'].toString();
+    humidity = json['humidity'].toString();
   }
 
   Map<String, dynamic> toJson() {
